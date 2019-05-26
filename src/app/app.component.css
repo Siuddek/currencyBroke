@@ -1,0 +1,36 @@
+.mainContainer{
+    font-size: 30px;
+    margin-top: 1%;
+    margin-left: 5%;
+    margin-right: 5%;
+    font-family: 'Helvetica', 'Arial', sans-serif;
+}
+.selectFrom{
+    display: inline;
+}
+.separator{
+    display: inline; 
+    font-size: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+.mat-raised-button.sendButton{
+    margin-left: 10%;
+    font-size: 28px;
+    margin-bottom: 105px;
+    height: 60px;
+}
+.buttonContainer{
+    float: right;
+    margin-right: 25%;
+    margin-top: 15px;
+}  
+.example-radio-button {
+    margin: 5px;
+    margin: 15px 0;
+    margin-left: 15px;
+    display: inline;
+}
+.radioSpace{
+    width: 100%;
+}

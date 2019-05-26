@@ -1,0 +1,14 @@
+<div class="chartContainer" *ngIf = "dataDownloaded">
+  Click on legend to hide graph
+  <canvas mdbChart
+      [chartType]="chartType"
+      [datasets]="chartValues"
+      [labels]="dates"
+      [colors]="chartColors"
+      [options]="chartOptions"
+      [legend]="true"
+      (chartHover)="chartHovered($event)"
+      (chartClick)="chartClicked($event)"
+  >
+  </canvas>
+</div>

@@ -1,0 +1,50 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div>
+  <app-header></app-header>
+</div>
+<div class="mainContainer">
+  <h3>
+    Please select exchange currencies
+  </h3>
+  <div class="selectFrom">
+      <mat-form-field style = "width: 20%;">
+          <mat-label style="font-size: 30px;">Source currency</mat-label>
+          <mat-select style="font-size: 26px; margin-top: 1%" [(value)]="sourceValue">
+            <mat-option *ngFor = "let currency of currencyList" [value] = "currency" >{{currency}}</mat-option>
+          </mat-select>
+      </mat-form-field>
+  </div>
+  <div class="separator">
+    to
+  </div>
+  <div class="selectFrom">
+      <mat-form-field style = "width: 20%;">
+          <mat-label style="font-size: 30px;">Target currency</mat-label>
+          <mat-select style="font-size: 26px; margin-top: 1%" [(value)]="targetValue">
+            <mat-option *ngFor = "let currency of currencyList" [value] = "currency">{{currency}}</mat-option>
+          </mat-select>
+      </mat-form-field>
+  </div>
+
+  <div class="buttonContainer">
+    <button mat-raised-button class = "sendButton" color="primary" (click) = "sendSelectedCurrencies()">Plot Currencies</button>
+  </div>
+  
+  <div class = "radioSpace">
+  <label id="example-radio-group-label">Pick data range: </label>
+  <mat-radio-group aria-labelledby="example-radio-group-label" class="example-radio-group" [(ngModel)]="userDataRange">
+  <mat-radio-button class="example-radio-button" *ngFor="let interval of avaibleIntervals" [value]="interval">
+    {{interval}}
+  </mat-radio-button>
+  </mat-radio-group>
+  </div>
+  
+  <div>
+      <button mat-raised-button type="button" color="primary" (click)="sendDataRange()" mdbWavesEffect>Apply</button>
+  </div>
+
+  <div>
+    <app-currency-chart></app-currency-chart>
+  </div>
+</div>
+<router-outlet></router-outlet>
